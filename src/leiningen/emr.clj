@@ -1,6 +1,8 @@
-(ns leiningen.emr)
+(ns leiningen.emr
+  (:require [amazonica.aws.elasticmapreduce :as emr]))
 
-(defn emr
+(defn ^:no-project-needed emr
   "I don't do a lot."
   [project & args]
-  (println "Hi!"))
+  (println "Listing clusters")
+  (prn (emr/list-clusters)))
